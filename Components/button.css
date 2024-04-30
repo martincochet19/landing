@@ -1,0 +1,22 @@
+.btn-blue {
+  background-color: blue;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-blue:hover {
+  background-color: #333;
+  color: white;
+}
+.centered {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}

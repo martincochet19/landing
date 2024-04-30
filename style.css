@@ -1,0 +1,240 @@
+/* Imports */
+@import url("https://fonts.googleapis.com/css?family=Lora:400,700|Roboto:300,400,700");
+@import url("components/avatar.css");
+@import url("components/banner.css");
+@import url("components/button.css");
+@import url("components/card.css");
+@import url("components/navbar.css");
+
+/* General Styles */
+body {
+  font-family: 'Lora', serif;
+  font-size: 18px;
+  margin: 0;
+  color: white;
+  background-color: #343a40;
+}
+
+h1, h2, h3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 60px; /* Adds more space below each title */
+  margin-top: 60px
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Header */
+header {
+  background-color: #343a40; /* Dark blue background */
+  padding: 10px 20px; /* Space around the header content */
+  color: white; /* Text color */
+}
+
+/* Navbar */
+.navbar {
+  display: flex; /* Enables flexbox layout */
+  align-items: center; /* Vertically centers content */
+  justify-content: space-between; /* Distributes content evenly between start and end */
+}
+
+.logo {
+  display: flex; /* Enables flexbox layout */
+  align-items: center; /* Centers the logo vertically */
+}
+
+.avatar {
+  width: 40px; /* Sets a fixed width for the logo image */
+  height: 40px; /* Sets a fixed height for the logo image */
+  border-radius: 50%; /* Rounds the image */
+  margin-right: 10px; /* Adds space between the logo and the menu */
+}
+
+.menu {
+  list-style: none; /* Removes list bullet points */
+  display: flex; /* Enables flexbox layout */
+  gap: 15px; /* Adds space between menu items */
+}
+
+.menu li a {
+  color: white; /* Text color */
+  text-decoration: none; /* Removes text underline */
+  padding: 10px; /* Adds space around text */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.menu li a:hover {
+  color: #00aaff; /* Changes text color on hover */
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  overflow-x: auto; 
+  white-space: nowrap; 
+}
+
+.navbar ul li {
+  margin-right: 40px;
+}
+
+.navbar ul li a {
+  color: #f4f6fc;
+}
+
+.navbar ul li a:hover {
+  color: #f4f6fc;
+  background-color: #0000ff;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.logo-item {
+  margin-left: auto;
+}
+
+.logo-item img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Stacks header content vertically */
+    align-items: flex-start; /* Aligns content to the left */
+  }
+
+  .menu {
+    flex-direction: column; /* Stacks menu items vertically */
+    width: 100%; /* Expands to full width */
+  }
+
+  .menu li {
+    width: 100%; /* Expands menu items to full width */
+  }
+
+  .menu li a {
+    display: block; /* Makes links block-level elements */
+    width: 100%; /* Expands links to full width */
+  }
+}
+
+/* Banner Section */
+.banner {
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  background-image: url('images/KtmAdventure.jpeg'); /* Replace with your image path */
+  background-size: cover; /* Scales the image to cover the entire container */
+  background-position: center; /* Centers the image in the container */
+  background-repeat: no-repeat; /* Prevents image from repeating */
+  display: flex; /* Enables flexbox layout */
+  flex-direction: column; /* Stacks elements vertically */
+  align-items: center; /* Centers elements horizontally */
+  justify-content: center; /* Centers elements vertically */
+  color: white; /* Text color */
+  text-align: center; /* Centers text */
+}
+
+.banner h1, .banner h2 {
+  margin: 100; /* Removes default margin */
+}
+
+.banner a {
+  background-color: #1E90FF; /* Button background color */
+  color: white; /* Button text color */
+  padding: 10px 20px; /* Button padding */
+  border: none; /* No border */
+  border-radius: 10px; /* Rounded corners */
+  text-decoration: none; /* Removes text underline */
+  transition: background-color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.banner a:hover {
+  background-color: #0088cc; /* Changes background color on hover */
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box; 
+}
+
+.about, #about p, #contact p, .event {
+  text-align: center; 
+  color: white; 
+}
+
+/* Card Section */
+.cards {
+  display: flex; /* Enables flexbox layout */
+  flex-wrap: wrap; /* Allows cards to wrap to new rows */
+  justify-content: center; /* Centers cards within the container */
+  gap: 20px; /* Adds space between cards */
+  margin-top: 20px; /* Adds space above the card section */
+}
+
+.card {
+  flex-basis: 250px; /* Sets a fixed width for each card */
+  flex-grow: 1; /* Allows cards to grow to fill available space */
+  background-color: #333; /* Card background color */
+  color: white; /* Text color */
+  border-radius: 5px; /* Rounds card corners */
+  text-align: center; /* Centers text within the card */
+  display: flex; /* Enables flexbox layout for card content */
+  flex-direction: column; /* Stacks content vertically */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* Card shadow effect */
+}
+
+.card img {
+  width: 100%; /* Ensure the image fills its container width */
+  height: 200px; /* Fixed height for all images */
+  object-fit: cover; /* Scales the image to cover its container, maintaining aspect ratio */
+  border-radius: 5px 5px 0 0; /* Rounds image corners on top */
+}
+
+.card-content {
+  flex: 1; /* Allows content to grow to fill remaining space */
+  padding: 20px; /* Adds padding for spacing */
+}
+
+.card-content h3 {
+  margin-top: 0; /* Removes default margin */
+  margin-bottom: 20px; /* Adds space below the card title */
+}
+
+.card-content p {
+  margin: 0; /* Removes default margin */
+  flex-grow: 1; /* Allows description to grow to fill remaining space */
+}
+
+/* Footer */
+footer {
+  background-color: #343a40;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  border-top: 1px solid #f8f9fa;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin-bottom: 20px;
+  padding: 0;
+}
+
+social-media li {
+  margin: 30px;
+}
+
+.social-media a {
+  color: white;
+  font-size: 20px;
+}
